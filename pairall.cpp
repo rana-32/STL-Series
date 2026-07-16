@@ -154,3 +154,39 @@ for (int i =0; i< n; i++)
 
 	return 0 ; 
 }
+
+
+
+
+
+///============
+///map frequency count pair 
+///===========
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n ; cin>> n ;
+    pair <int , int > pr ;
+    map<pair<int , int > , int > mp ;
+    for (int i = 0 ; i< n ; i++)
+    {
+     int x , y ; cin>> x >> y ;
+     pr = make_pair (x , y);
+     mp[pr]++;
+
+
+    }
+
+for (auto it : mp)
+{
+    cout<<it.first.first<<" "<<it.first.second <<" --> "<<it.second<<endl;
+}
+
+
+
+
+    
+    return 0;
+}
