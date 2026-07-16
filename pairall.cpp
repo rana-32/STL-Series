@@ -190,3 +190,51 @@ for (auto it : mp)
     
     return 0;
 }
+
+
+
+
+
+
+
+
+///============
+///map marked trick
+///===========
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n ; cin>> n ;
+    map <int , bool > mp;
+    vector<int>vec;
+    for (int i = 0 ; i<n ; i++ )
+    {
+        int x ;
+        cin>> x ;
+        
+        if (mp[x]==false)
+        {
+            mp[x]= true;
+        }
+        else 
+        {
+            vec.push_back(x);
+        }
+    }
+
+if (vec.size()>0)
+{
+    cout<<"not possible";
+}
+else 
+{
+    cout<<"possible";
+}
+
+
+    
+    return 0;
+}
