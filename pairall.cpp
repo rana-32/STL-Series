@@ -238,3 +238,45 @@ else
     
     return 0;
 }
+
+
+
+//========================
+//jmne input dibo omne output dibe mane sort korbe nah 
+//==========================
+
+ unordered_map<string , int > mp ;
+  int m , n ;
+cin>> n >> m ;
+  int z = m + n ;
+vector <string > vec;
+  for (int i = 0  ; i< z ; i++)
+  {
+    string s ; cin>> s ;
+
+    if(mp[s]==0)
+    {
+        vec.push_back(s);
+    }
+    mp[s]++;
+
+  }
+
+  for (auto it : vec)
+  {
+    if (mp[it]>1)
+    {
+        cout<<"YES"<<nl;
+    }
+    else 
+    {
+        cout<<"NO"<<nl;
+    }
+  }
+
+
+
+
+  
+}
+
