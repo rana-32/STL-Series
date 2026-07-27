@@ -22,3 +22,25 @@ int n, m;
     ans += vec[i];
   }
   cout << ans << nl;
+
+
+
+//map problem 2 ---->https://codeforces.com/contest/918/problem/B
+//soln :--->
+  int n, m;
+  cin >> n >> m;
+  map<string, string> mp1;
+  for (int i = 0; i < n; i++)
+
+  {
+    string name, ip;
+    cin >> name >> ip;
+    mp1[ip] = name;
+  }
+
+  for (int i = 0; i < m; i++) {
+    string name2, ip2;
+    cin>>name2>>ip2;
+    ip2.pop_back();
+    cout << name2 << " " << ip2 << "; #" << mp1[ip2] << nl;
+  }
